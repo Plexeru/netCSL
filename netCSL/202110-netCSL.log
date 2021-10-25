@@ -1,0 +1,38 @@
+[2021-10-25 11:17:41.178+02 INF] Authenticating...
+[2021-10-25 11:17:41.512+02 ERR] The specified module 'ActiveDirectory' was not loaded because no valid module file was found in any module directory.
+FullyQualifiedErrorID: Modules_ModuleNotFound,Microsoft.PowerShell.Commands.ImportModuleCommand
+Activity: Import-Module
+Target: ActiveDirectory [String]
+Category: ResourceUnavailable
+Reason: FileNotFoundException
+at <ScriptBlock>, C:\Temp\netCSL\netCSL.ps1: line 108
+at <ScriptBlock>, <No file>: line 2
+
+System.IO.FileNotFoundException: The specified module 'ActiveDirectory' was not loaded because no valid module file was found in any module directory.
+[2021-10-25 11:17:41.513+02 INF] Get local AD devices
+[2021-10-25 11:17:41.557+02 ERR] Error while getting local AD devices -> System.Management.Automation.CommandNotFoundException: The term 'Get-ADComputer' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+   at System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   at System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+FullyQualifiedErrorID: Microsoft.PowerShell.Commands.WriteErrorException,netCSL.ps1
+Activity: Write-Error
+Category: NotSpecified
+Reason: WriteErrorException
+at <ScriptBlock>, C:\Temp\netCSL\netCSL.ps1: line 122
+at <ScriptBlock>, <No file>: line 2
+
+Microsoft.PowerShell.Commands.WriteErrorException: Error while getting local AD devices -> System.Management.Automation.CommandNotFoundException: The term 'Get-ADComputer' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+   at System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   at System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+[2021-10-25 11:17:41.557+02 INF] Get Azure AD devices
+[2021-10-25 11:17:41.810+02 INF] Export Azure AD devices to CSV C:\Temp\Output_Files\AzureADDevices.csv
+[2021-10-25 11:17:41.813+02 INF] Export Azure AD devices to JSON C:\Temp\Output_Files\AzureADDevices.json
+[2021-10-25 11:17:41.815+02 WRN] Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+[2021-10-25 11:17:42.358+02 WRN] The provided service principal secret will be included in the 'AzureRmContext.json' file found in the user profile ( C:\Users\sasch\.Azure ). Please ensure that this directory has appropriate protections.
+[2021-10-25 11:17:46.002+02 INF] Script Finished
+Tags: PSHOST

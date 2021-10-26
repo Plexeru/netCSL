@@ -35,5 +35,5 @@ Diplomarbeit und Projektauftrag
 
   Graph Explorer also provides information about the correct and needed permissions for the application.
 
-# Logging
-  To create a Log start the Start-netCSLScript.ps1 PowerShell script
+# Logging & Starting the complete Script
+  To create a Log and run the Complete Script, please start the Start-netCSLScript.ps1 PowerShell script
